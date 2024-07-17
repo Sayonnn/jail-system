@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,900&display=swap');
+*{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    color:var(--text-color);
+    padding:0;
+}
+
+:root{
+    --background:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --blue:#0ef;
+    --black: black;
+    --gray:gray;
+    --gold:rgb(239, 221, 124);
+    --bg-color:#1f242d;
+}
+.body{
+    background-color: var(--background); 
+}
+
+/* cardcontainer styling */
+.cardContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+    width:100%;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cardContainer .card{
+    background-color: var(--background);
+    border:2px solid var(--gray);
+    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    margin:3rem;
+    padding:2rem;
+}
+.cardContainer .card h2{
+   margin:.5rem;
+   font-size:20px;
+   color:var(--gold);
+}
+
+.cardContainer .card .officer{
+    color:var(--blue);
+ }
+
+
+.cardContainer .card img{
+  width:150px;
+  height:150px;
+  border-radius: 20px;
+  margin-bottom:1rem;
+  color:var(--gold);
+}
+
+.cardContainer #officer:hover{
+    transform:scale(1.05);
+    box-shadow: 0 0 2rem var(--blue);
+    transition:.4s ease-in;
+}
+.cardContainer #admin:hover{
+    transform:scale(1.05);
+    box-shadow: 0 0 2rem var(--gold);
+    transition:.4s ease-in;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,900&display=swap');
+*{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    color:var(--gold);
+    text-decoration: none;
+    list-style: none;
+    padding:0;
+}
+td{
+    font-size:12px;
+}
+th{
+    font-size:14px;
+}
+
+:root{
+    --background:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+    --black: black;
+    --gray:rgb(92, 91, 91);
+    --gold:rgb(239, 221, 124);
+}
+.body{
+    background-color: var(--background);
+    color:black;
+}
+.body::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 12px;
+}
+nav{
+    background-color:black;
+    margin:0;
+}
+nav a{
+    padding:1rem 2rem;
+    text-decoration:none;
+    color:var(--gold);
+}
+
+#query-Container{
+    padding:1rem;
+    height:15vh;
+}
+#query-Container #Queries{
+    border-radius:15px;
+    background-color: var(--gray);
+    width:10rem;
+    margin-left: 25rem;
+    font-size:12px;
+}
+#Queries::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 12px;
+}
+
+#query-Container button{
+    border-radius:15px;
+    background-color: var(--gray);
+    border:2px solid var(--gray);
+    font-size:12px;
+    padding:.3rem;
+    width:5rem;
+}
