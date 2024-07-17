@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,900&display=swap');
+*{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    color:var(--text-color);
+    padding:0;
+}
+
+:root{
+    --background:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+    --black: black;
+    --gray:rgb(92, 91, 91);
+    --gold:rgb(239, 221, 124);
+}
+.body{
+    background-color: var(--background);
+
+}
+
+/* acount update style */
+img{
+    width:100px;
+    height:100px;
+    margin:1rem;
+}
+
+/* Officer account updating style  */
+
+.Update-Acc-Container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Officer-Update-Acc h2{
+    font-size:15px;
+    padding:.3rem;
+    border:1px double var(--gold);
+
+}
+
+.Update-Acc-Container .Officer-Update-Acc .Update-Acc{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.Update-Acc-Container .Officer-Update-Acc .Update-Acc label{
+    width:6rem;
+    text-align: left;
+    font-size:13px;
+
+}
+.Update-Acc-Container .Officer-Update-Acc .Update-Acc input{
+    border-radius:15px;
+    background-color: var(--gray);
+    color:var(--gold);
+    border:1px solid var(--gold);
+    text-align: center;
+    margin:.3rem;
+    font-size:13px;
+}
+/* Case updating style */
+
+.UpdateCaseContainer{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.UpdateCase h2{
+    font-size:15px;
+    padding:.3rem;
+    border:1px double var(--gold);
+
+}
+
+.UpdateCaseContainer .UpdateCase .Cases{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.UpdateCaseContainer .UpdateCase .Cases label{
+    width:6rem;
+   text-align: left;
+   font-size:13px;
+}
+.UpdateCaseContainer .UpdateCase .Cases input{
+    border-radius:15px;
+    background-color: var(--gray);
+    color:var(--gold);
+    border:1px solid var(--gold);
+    text-align: center;
+    margin:.3rem;
+    font-size:13px;
+    width:12rem;
+}
+
+/* Person Involve updating style  */
+
+.Update-Person-Involve-Container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.Update-Person-Involve h2{
+    font-size:15px;
+    padding:.3rem;
+    border:1px double var(--gold);
+
+}
+.Update-Person-Involve-Container .Update-Person-Involve .Person-Container{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.Update-Person-Involve-Container .Update-Person-Involve .Person-Container label{
+   width:6rem;
+   text-align: left;
+   font-size:13px;
+
+}
+.Update-Person-Involve-Container .Update-Person-Involve .Person-Container input{
+    border-radius:15px;
+    background-color: var(--gray);
+    color:var(--gold);
+    border:1px solid var(--gold);
+    text-align: center;
+    margin:.3rem;
+    font-size:13px;
+    width:12rem;
+
+}
+
+/* officer information updating style */
+
+.Update-Officer-Container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.Update-Officer h2{
+    font-size:15px;
+    padding:.3rem;
+    border:1px double var(--gold);
+}
+
+.Update-Officer-Container .Update-Officer .Officer-Information{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Update-Officer-Container .Update-Officer .Officer-Information label{
+    width:6rem;
+    text-align: left;
+    font-size:13px;
+}
+.Update-Officer-Container .Update-Officer .Officer-Information input{
+    border-radius:15px;
+    background-color: var(--gray);
+    color:var(--gold);
+    border:1px solid var(--gold);
+    text-align: center;
+    margin:.3rem;
+    font-size:13px;
+    width:12rem;
+}
+.Update-Officer-Container .Update-Officer .Officer-Information input[type = file]{
+    width:11rem;
+    font-size:12px;
+}
+
+#showInserts{
+    display:none;
+}

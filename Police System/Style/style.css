@@ -1,0 +1,124 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,900&display=swap');
+*{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    
+}
+:root{
+  --primary:rgb(237, 228, 176);
+  --background:#1f242d;
+  --black:black ;
+  --secondary: rgb(239, 221, 124);
+  --white:rgb(224, 221, 221); 
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --blue:#0ef;
+    --gray:gray;
+    --gold:rgb(239, 221, 124);
+}
+/* placeholder codes */
+::placeholder{
+  text-align: center;
+  font-size:13px;
+}
+
+.Container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background);
+  width:100%;
+  text-align: center;
+}
+
+/* overall login form codes */
+.Log-Container{
+  padding:1rem;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 0 0 8rem var(--gold);
+}
+.Log-Container .Name{
+  font-size: 13px;
+  color:var(--black);
+  background-color: var(--gray);
+  border-radius: 12px;
+  padding:.2rem;
+}
+.Log-Container .logo{
+  width:150px;
+  height:140px;
+  float:left;
+  padding:.5rem;
+}
+/* code for authorize logo */
+.Log-Container .Alogo{
+  width:150px;
+  height:140px;
+  padding:.5rem;
+}
+
+#Registration{
+  display:flex;
+  flex-direction: column;
+}
+#Registration input{
+  margin:.5rem;
+  margin-top:1rem;
+  
+  font-size: 13px;
+}
+#Registration input[type=text]{
+  border-radius: 6px;
+  border:none;
+  text-align: center;
+}
+#Registration input[type=password]{
+  border-radius: 6px;
+  border:none;
+  text-align: center;
+}
+
+/* container buttons */
+#btnContainer{
+  margin-top:.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#btnContainer button{
+  font-size: 14px;
+  width:80px;
+  margin:.5rem;
+  border:1.5px solid var(--gold);
+  background:transparent;
+  cursor:pointer;
+  color:var(--gold);
+  transition:.3s ease;
+  border-radius: 6px;
+}
+
+/* container button hovering effects */
+#btnContainer button:hover{
+  transform:scale(1.1);
+}
+.Forgot{
+  font-size:12px;
+  color:var(--gold);
+  transition:.5s ease;
+}
+.Forgot:hover{
+  transform:scale(1.1);
+}
+
+
+
