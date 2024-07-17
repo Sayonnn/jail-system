@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    text-decoration:none;
+    list-style-type: none;
+    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior:smooth;
+    outline:none;
+    border:none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+    --black: black;
+}
+
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+
+/* =================navigation codes starts here =================*/
+.menu-container{
+    width:100%;
+    padding:1rem 5%;
+    background-color: var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index:100;
+    position:fixed;
+}
+.menu-container .logo{
+    font-size:2rem;
+    font-weight:600;
+}
+.menus {
+   font-size:15px;
+   color:var(--text-color);
+   margin-left:4rem;
+}
+.menus i{
+    padding-left:.5rem;
+    padding-right:.5rem;
+}
+.menus i a{
+    font-size:15px;
+    color:var(--text-color);
+    padding-left:.5rem;
+    padding-right:.5rem;
+    font-weight: 600;
+ }
+ .menus i:hover{  
+    color:var(--main-color);
+    cursor:pointer;
+    
+ }
+ .menus i:hover a{  
+    color:var(--main-color);
+    
+ }
+ .menus .active,
+ .menus #active{
+    color:var(--main-color);
+
+ }
+ /*================= home contents================= */
+ .homeContainer {
+    min-height:100vh;
+    width:100%;
+    padding:1rem 5%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+ }
+ .homeContainer img{
+    width:350px;
+    height:350px;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    box-shadow: 2px 2px 25px 2px var(--main-color);
+    
+ }
+ .myImage {
+    margin-left:50px;
+ }
+ .Information{
+    width:600px;
+ }
+ .Information h3{
+    font-size:20px;
+    font-weight:600;
+    flex-wrap:wrap;
+   
+ }
+ .Information h1{
+    font-size:35px;
+    font-weight:600;
+    color:var(--main-color);
+ }
+ .Information p{
+    font-size:12px;
+ }
+/* =================social media platforms================== */
+.socialIcons{
+    width:100%;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+ .socialIcons a{
+    display:inline-flex;
+    align-items: center;
+    justify-content:center;
+    font-size:30px;
+    width:3rem;
+    height:3rem;
+    background:transparent;
+    border:.2rem solid var(--main-color);
+    border-radius:50%;
+    font-size:1.5rem;
+    color:var(--main-color);
+    margin:3rem 1.5rem;
+    transition:.5s ease;
+ }
+ .socialIcons a:hover{
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+ }
+ /* ==================button explore ===============*/
+ .explore{
+    width:100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+ }
+ .btnExplore{
+    display:inline-block;
+    position:relative;
+    color:var(--text-color);
+    border-radius:25px;
+    width:10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border:.2rem solid var(--main-color);
+    font-weight:600;
+    padding:7px;
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+ }
+ .btnExplore:hover{
+    background:var(--bg-color);
+    color:var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+ }
+
+ /*================= services ===================*/
+
+ #ServiceContainer h2{
+    margin-bottom:3rem;
+ }
+ #ServiceContainer{
+    width:100%;
+    background-color: var(--second-bg-color);
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height:90vh;
+ }
+#ServiceContainer .servicesBox{
+    display:flex;
+    padding:2rem 4rem 5rem;
+}
+.servicesBox .myServices:hover img{
+    transform:scale(1.05);
+    margin-bottom: 10px;;
+    transition:.8s ease;
+    cursor:pointer;
+    border:.2rem solid var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.servicesBox .myServices:hover h3{
+   color:var(--main-color);
+}
+.servicesBox .myServices:hover p{
+    color:var(--main-color);
+ }
+#ServiceContainer .servicesBox img{
+    width:350px;
+    height:350px;
+    border-radius: 30px;;
+}
+.serviceHeading{
+    padding-top:20px;
+    color:var(--text-color);
+    font-size:35px;
+    transition:.5s ease;
+}
+.serviceHeading:hover{
+    color:var(--main-color);
+    font-size:35px;
+    text-decoration: underline;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+/*================ sample work container ==============*/
+.workContainer{
+   background-color: var(--second-bg-color);
+   text-align: center;
+}
+
+.workContainer h2{
+    padding:30px;
+    font-size:35px;
+ 
+}
+.workContainer h2:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+    color:#0ef;
+    text-decoration: underline;
+}
+
+.workContainer .workBox{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items:center;
+    gap: 3rem;
+
+}
+
+.workBox .work{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    border-radius:2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    margin:5%;
+
+}
+
+.work img{
+  width:100%;
+  border-radius: 30px;
+  height:100%;
+  transition:.5s ease;
+}
+
+.work .workInformation{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform:translateY(100%);
+    transition:.8s ease;
+    cursor:pointer;
+   
+}
+
+.work:hover .workInformation{
+    transform: translate(0%);
+}
+.work:hover img{
+    cursor:pointer;
+    transform:scale(1.1);
+}
+
+.workInformation h3, .workInformation p{
+    color:var(--second-bg-color);
+    font-size:20px;
+}
+
+
+/* ==================about code starts here=============== */
+
+.about{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    height:50vh;
+    background-color:var(--bg-color);
+}
+.about .me{
+    text-align: center;
+    padding-top:2%;
+}
+.about h3{
+   font-size:15px;
+   font-weight:600;
+}
+.aboutInfo{
+    text-align: center;
+    width:100%;
+    padding:2% 20%;
+    
+}
+.aboutInfo p{
+    padding-top:25px;
+   text-align: justify;
+}
+.stars i{
+    transition:.5s ease;
+    background:transparent;
+    border-radius:50%;
+}
+.stars i:hover{
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+    cursor:pointer;
+}
+
+/* ===============registration codes starts here=================== */
+.Registration{
+    width:100%;
+    height:100vh;
+    padding:2rem 31rem;
+   
+    background: var(--second-bg-color);
+    display:none;
+    
+    
+}
+
+.Reg{
+    padding-top:15%;
+    width:38rem;
+    height:72vh;
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    padding:40px;
+    text-align: center;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.regHeading{
+    padding-bottom:3rem;
+    font-size:32px;
+}
+
+.Registration #form{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+
+}
+
+#form input{
+    width:225px;
+    border-radius: 25px;
+    border:.2rem solid var(--main-color);
+    background-color: transparent;
+    color:White;
+    text-align: center;
+}
+#form input:focus{
+    background-color: transparent;
+    text-align: center;
+    border:.2rem solid var(--main-color);
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+    text-align: center;
+}
+
+#form input[type=date]{
+    color:whitesmoke;
+    padding-left:5px;
+    width:150px;
+}
+#form input[name="Age"]{
+    width:150px;
+    text-align: center;
+    padding-right:5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+
+::placeholder{
+    padding-left:7px;
+}
+.loginSocial{
+    padding-top:3rem;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.loginSocial a{
+    font-size:30px;
+    color:var(--main-color);
+    border:.2rem solid var(--main-color);
+    border-radius: 50%;
+    width:50px;
+    background: transparent;
+    transition:.7s ease;
+}
+
+.Registration h5{
+    padding-top:4rem;
+}
+.loginSocial a:hover{
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.loginSocial a:hover i{
+    transition: .2s ease;
+    transform: scale(1.1);
+}
+
+/* registration button */
+.Reg .Submit{
+    border-radius:30px;
+    padding:10px;
+    width: 100px;
+    cursor:pointer;
+    transition:.5s ease;
+    margin-top:2rem;
+    background-color: var(--main-color);
+    border:.2rem solid var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    font-weight:600;
+    right:0%;
+    margin-right:0%;
+}
+.Reg .Submit:hover{
+    cursor:pointer;
+    transition:.5s ease;
+    margin-top:2rem;
+    transform:scale(1.1);
+    background-color: transparent;
+    color:white;
+}
+
+.butContainer {
+    width:210%;
+    display:flex;
+    align-items:center;
+    text-align: center;
+
+    justify-content: space-evenly;
+}
+
+/* ===========footer============= */
+.footer{
+    width:100%;
+    height:7rem;
+    background-color: var(--second-bg-color);
+    display:flex;
+    text-align: center;
+    align-items:flex-end;
+    justify-content: center;
+
+}
+.footer a{
+    position:absolute;
+    color: var(--text-color);
+    margin-bottom:3%;
+    color:var(--text-color);
+    border-radius:25px;
+    width:10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border:.2rem solid var(--main-color);
+    font-weight:600;
+    padding:7px;
+    background:var(--main-color);
+    color:var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+    transition:.5s ease;
+}
+.footer a:hover{
+    background:transparent;
+    color:var(--main-color);
+}
+
+.footer h4{
+    bottom:0%;
+    margin-bottom:0;
+}

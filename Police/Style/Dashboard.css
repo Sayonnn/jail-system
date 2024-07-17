@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,900&display=swap');
+*{
+    font-family: 'Roboto',sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    color:var(--text-color);
+    padding:0;
+}
+
+:root{
+    --background:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+    --black: black;
+    --gray:rgb(92, 91, 91);
+    --gold:rgb(239, 221, 124);
+}
+.body{
+    background-color: var(--background);
+}
+/* sidebarcontainer styling */
+.sidebarContainer{
+    float:left;
+    padding:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right:2px solid gray;
+        
+}
+.sidebarlogoContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-bottom:1rem;
+    padding:1rem;
+    border-radius: 50%;
+}
+.sidebarlogoContainer #sidebarImg{
+    width:50px;
+    height:50px;
+}
+.sidebarlogoContainer h2{
+    margin:1rem 0rem;
+    padding:.5rem;
+    font-size:17px;
+    color:var(--gold);
+}
+
+/* sidebar user images and name */
+.sidebarInfoContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction:column;
+    margin-bottom:3rem;
+    width:100%;
+    padding:.5rem;
+}
+
+.sidebarInfoContainer img{
+    border-radius: 50%;
+    width:110px;
+    height:110px;
+    margin:1rem;
+    box-shadow: 0 0 1rem var(--black);
+    margin-bottom:.5rem;
+    transition: .5s ease-in;
+}
+.sidebarInfoContainer img:hover{
+    transform:scale(1.05);
+}
+.sidebarInfoContainer h3{
+    font-size:15px;
+}
+.sidebarInfoContainer h6{
+    font-size:11px;
+    font-weight: lighter;
+}
+
+.viewRank{
+    background-color: transparent;
+    font-size: 11px;
+    padding:3%;
+    border-radius:15px;
+    border:2px solid gray;
+    transition:1s ease;
+}
+.viewRank:hover{
+    color:var(--gold);
+    border:2px solid var(--gold);
+    transform:scale(1.1);
+}
+/* styling the menu icons on the side bar */
+.sidebarMenuContainer{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom:5rem;
+    width:100%;
+
+}
+.sidebarMenuContainer i{
+    padding:.5rem;
+    margin:.5rem;
+    transition: .5s ease;
+    border-radius: 30px;
+    transition:1s ease;
+    color:var(--gold);
+}
+.sidebarMenuContainer i:hover{
+    cursor:pointer;
+    background-color:gray;
+    transform:scale(1.05);
+    color:var(--gold);
+}
+.sidebarMenuContainer i:hover a{
+    color:var(--gold);
+}
+.sidebarMenuContainer a{
+    color:var(--text-color);
+    text-decoration: none;
+    font-size:13px;
+    margin:1rem;
+}
+
+.sidebarMenuContainer #addCases,
+.sidebarMenuContainer #addPersons,
+.sidebarMenuContainer #addOfficer,
+.sidebarMenuContainer #addAccount{
+    display:none;
+}
+
+#showInserts{
+    margin:.3rem 3rem;
+    border-radius:25px;
+    font-size:12px;
+    background-color: transparent;
+    border:2px solid gray;
+    transition:.5s ease-in;
+    
+}
+#showInserts:hover{
+    transform:scale(1.1);
+    color:var(--gold);
+    
+}
+/* .sidebarMenuContainer button{
+    background-color: transparent;
+    border:none;
+} */
+/* button  */
+.sidebarLogout {
+    padding:1rem;
+
+}
+.sidebarLogout .Logout{
+    background-color: var(--background);
+    border:2px solid var(--gray);
+    transition:1s ease;
+    padding:.5rem .5rem;
+    margin:1rem;
+    border-radius:30px;
+    font-size:13px;
+}
+
+.sidebarLogout .Logout:hover{
+   transform:scale(1.1);
+   border:2px solid var(--gold);
+   color:var(--gold);
+}
+
+/* top bar styling codes */
+.topbarContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-top:2rem;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom:1rem;
+
+}
+.topbarTitle{
+    padding:1rem 0rem;
+    
+}
+.topbarTitle h2{
+    color:var(--gold);
+    font-size:25px;
+}
+#search{
+    background-color: transparent;
+    border:none;
+    padding:.3rem .7rem;
+}
+.SearchbarContainer{
+    padding:1rem 0rem;
+}
+.SearchbarContainer i:hover{
+    cursor:pointer;
+}
+.UpgradeContainer{
+    padding:.5rem;
+    border-radius: 25px;
+    position:sticky;
+}
+.UpgradeContainer .Upgrade{
+    border-radius:20px;
+    background-color:var(--gold);
+    color:var(--black);
+    padding:0rem .5rem;
+    font-size:15px;
+    border:2px solid var(--gold);
+    transition:1s ease;
+    margin:0rem .2rem;
+    
+}
+
+.UpgradeContainer .Upgrade:hover{
+   transform:scale(1.1);
+   box-shadow: 0 0 .5rem var(--gold);
+}
+
+.UpgradeContainer .Notification{
+    border-radius:50%;
+    background-color: transparent;
+    border:1px solid var(--gray);
+    padding:.3rem 0rem;
+    transition:1s ease;
+}
+.UpgradeContainer .Notification i{
+    padding:0rem 1rem;
+    transition:1s ease;
+}
+.UpgradeContainer .Notification i:hover
+,.UpgradeContainer .Notification:hover i {
+    transform:scale(1.1);
+    color:var(--gold);
+}
+
+.UpgradeContainer .Notification:hover {
+    transform:scale(1.1);
+    color:var(--gold);
+
+}
+
+/* form inputs for officer information styling */
+
+::placeholder{
+    text-align: center;
+    color:gray;
+    font-size: 13px;
+}
+.createContainer{
+    padding:1rem;
+}
+
+.Add-Officer-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:2rem;
+}
+.Officer-Info-Container{
+    display:none;
+}
+.Officer-Info-Container h2{
+    font-size:15px;
+    padding:1rem;
+}
+.Officer-Info-Container .inputContainer {
+    text-align: left;;
+}
+.Officer-Info-Container .inputContainer input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:20rem;
+    text-align: center;
+}
+
+.Officer-Info-Container img{
+    width:120px;
+    height:120px;
+    margin:2rem;
+}
+
+.Officer-Info-Container .inputContainer input[type=number]{
+    width: 5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+.Officer-Info-Container label{
+    font-size:14px;
+    width:5rem;
+}
+
+.inputContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Officer-Info-Container input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:15rem;
+    text-align: center;
+}
+.Officer-Info-Container input:hover{
+    margin:.3rem;
+}
+.Officer-Info-Container input:active,.Officer-Info-Container input:focus{
+    border:1px solid var(--gold);
+    box-shadow: 0 0 .3rem var(--gold);
+}
+.btnContainer{
+    padding:1rem;
+}
+.btnContainer button{
+    margin:2rem .5rem;
+    padding:.3rem;
+    background-color: transparent;
+    border:2px solid var(--gray);
+    color:var(--gray);
+    border-radius:15px;
+    width:10rem;
+    transition:.5s ease-in;
+    
+}
+.btnContainer button:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 1rem var(--gold);
+    color:var(--gold);
+}
+
+.btnContainer input[type=button]{
+    margin:2rem .5rem;
+    padding:.3rem;
+    background-color: transparent;
+    border:2px solid var(--gray);
+    color:var(--gray);
+    border-radius:15px;
+    width:10rem;
+    transition:.5s ease-in;
+    
+}
+.btnContainer input[type=button]:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 1rem var(--gold);
+    color:var(--gold);
+}
+
+
+/* account creation for officer */
+.Officer-Acc-Container{
+    height:100vh;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.Officer-Acc-Container img{
+    width:150px;
+    height:160px;
+    margin:2rem;
+}
+.Officer-Acc-Container h2{
+   font-size:15px;
+   padding:1rem;
+   overflow-y: hidden;;
+
+}
+
+.Officer-Acc-Container input{
+    margin:.5rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:15rem;
+    text-align: center;
+    height:2rem;
+}
+.Officer-Acc-Container input:active,.Officer-Acc-Container input:focus {
+  border:1px solid var(--gold);
+  box-shadow: 0 0 .3rem var(--gold);
+}
+.Officer-Acc-Container button{
+    margin:2rem .5rem;
+    padding:.3rem;
+    background-color: transparent;
+    border:2px solid var(--gray);
+    color:var(--gray);
+    border-radius:15px;
+    width:10rem;
+    height:4rem;
+    transition:.5s ease-in;
+    margin-bottom:2rem;
+}
+
+.Officer-Acc-Container button:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 1rem var(--gold);
+    color:var(--gold);
+}
+
+.Officer-Acc-Container  .note{
+    border:1px solid var(--gray);
+    display: flex;
+    flex-wrap:wrap;
+    overflow-y: hidden;
+    padding:1rem;
+    
+}
+
+.Officer-Acc-Container  .note h6{
+    font-size:14px;
+    margin-bottom:1rem;
+}
+
+
+/* this part is for the dashboard main statistics styling */
+.StatisticsContainer{
+    margin-left:2rem;
+    margin-right:1rem;
+    display:none;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+.StatisticsContainer1{
+    margin-left:2rem;
+    margin-right:1rem;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    display:none;
+
+}
+.StatisticsContainer2{
+    margin-left:2rem;
+    margin-right:1rem;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    display:none;
+
+}
+.StatisticsContainer3{
+    margin-left:2rem;
+    margin-right:1rem;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    display:none;
+}
+
+.StatisticsContainer .StatContainer{
+    padding:1rem;
+    height:30rem;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+    margin:1rem;
+    border-radius:30px;
+    display:none;
+}
+.StatisticsContainer1 .StatContainer1{
+    padding:1rem;
+    height:30rem;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+    margin:1rem;
+    border-radius:30px;
+    display:none;
+}
+.StatisticsContainer2 .StatContainer2{
+    padding:1rem;
+    height:30rem;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+    margin:1rem;
+    border-radius:30px;
+    display:none;
+
+}
+.StatisticsContainer3 .StatContainer3{
+    padding:1rem;
+    height:30rem;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+    margin:1rem;
+    border-radius:30px;
+    display:none;
+}
+
+.StatContainer::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 12px;
+}
+.StatContainer1::-webkit-scrollbar {
+    width: 12px;
+    scroll-behavior: smooth;
+}
+.StatContainer2::-webkit-scrollbar {
+    width: 12px;
+    scroll-behavior: smooth;
+}
+.StatContainer3::-webkit-scrollbar {
+    width: 12px;
+    scroll-behavior: smooth;
+}
+.StatContainer h2{
+    font-size:15px;
+    margin:2rem;
+    padding:.5rem;
+    border:1.5px solid var(--gray);
+    /* border-bottom: 2px solid gray; */
+}
+
+.StatContainer1 h2{
+    font-size:15px;
+    margin:2rem;
+    padding:.5rem;
+    border:1.5px solid var(--gray);
+
+}
+.StatContainer2 h2{
+    font-size:15px;
+    margin:2rem;
+    padding:.5rem;
+    border:1.5px solid var(--gray);
+
+}
+.StatContainer3 h2{
+    font-size:15px;
+    margin:2rem;
+    padding:.5rem;
+    border:1.5px solid var(--gray);
+}
+td{
+    font-size:11px;
+}
+th{
+    font-size:11px;
+}
+.btnTable button{
+    margin:0rem .2rem;
+}
+.btnTable a{
+    font-size:12px;
+}
+
+/* this styling is for the Officer Involve styling */
+.Add-Person-Involve{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:2rem;
+}
+.Person-Involve-Container{
+    margin-top:2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+.Person-Involve-Container img{
+    width:150px;
+    height:150px;
+    padding:1rem;
+}
+.Person-Involve-Container h2{
+    font-size:15px;
+    padding:1rem;
+}
+.Person-Involve-Container .Person-Container{
+    text-align: left;
+}
+.Person-Involve-Container .Person-Container input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:20rem;
+    text-align: center;
+}
+.Person-Involve-Container .Person-Container label{
+    font-size:14px;
+    width:8rem;
+}
+.Person-Involve-Container .Person-Container input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:14rem;
+    text-align: center;
+}
+
+/* this code is for styling of the cases insertion panel */
+
+.CaseContainer{
+    display:none;
+}
+.addCase{
+    margin:0rem 2rem;
+}
+#addcaseContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.CaseContainer #addcaseContainer .addCase .Cases{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+.addCase .Cases label{
+    font-size:14px;
+    width:8rem;
+}
+.addCase .Cases input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:14rem;
+    text-align: center;
+}
+.addCase h2{
+    font-size:15px;
+    padding:1rem;
+}
+.addCase img{
+    width:150px;
+    height:150px;
+    padding:1rem;
+}
+
+/* this part is for styling the add proof panel */
+#addCaseProof .addProof {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+#addCaseProof{
+    position:absolute;
+    padding:5rem ;
+    background-color: var(--background);
+    border-radius:25px;
+    justify-content: center;
+    display:none;
+
+}
+#addCaseProof .addProof h2{
+    font-size:15px;
+    padding:1rem;
+}
+#addCaseProof .addProof img{
+    width:150px;
+    height:150px;
+    padding:1rem;
+}
+#addCaseProof .addProof .Proof {
+  text-align: left;
+}
+#addCaseProof .addProof .Proof label{
+    font-size:14px;
+    width:8rem;
+}
+#addCaseProof .addProof .Proof input{
+    margin:.3rem;
+    font-size:15px;
+    background-color: var(--gray);
+    border-radius:15px;
+    border:none;
+    width:14rem;
+    text-align: center;
+}
+
+/* ================================================================================================================ */
+
+.Searchbar{
+    float:right;
+    margin:1rem;
+}
+
+/* for officer dashboard */
+
+#Dashboard,#Case,#Message,#Request,#Settings{
+    display:none;
+}
+
+#OfficerCaseHandles{
+padding:2rem;
+height:90vh;
+scroll-behavior: smooth;
+display:none;
+}
+
+#OfficerCaseHandles #CaseHandlesContainer{
+    display:flex;
+    flex-direction:row;
+    border:1px solid gray;
+    border-radius:25px;
+    margin:.5rem;
+    padding:.5rem;
+}
+#OfficerCaseHandles  #CaseHandlesContainer img {
+margin:.5rem;
+width:60px;height:60px;
+}
+#CaseHandlesContainer #Firsts{
+    display:flex;
+    flex-direction:column;
+    width:10rem;
+    margin:1rem;
+}
+#CaseHandlesContainer #Firsts #Last{
+    margin:1rem;
+}
+
+#CaseHandlesContainer #Firsts #Last h6{
+    font-size:13px;
+}
+
+#CaseHandlesContainer #First {
+    padding:.2rem;
+    font-size:12px;
+    width:15rem;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:justify;
+    flex-direction: column;
+}
+#CaseHandlesContainer #First .Title{
+    font-size:14px;
+    margin:.8rem;
+}
+#CaseHandlesContainer #First .Description{
+    font-size:10px;
+    font-weight: 400;
+}
+#CaseHandlesContainer #First h6{
+    font-size:12px;
+}
+
+/* officer messaging====================================================================================================================== */
+
+#officerMessagingContainer{
+    margin:8rem;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#officerMessagingContainer #officerMessaging{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    flex-flow: column;
+}
+#officerMessagingContainer #officerMessaging button{
+    float:right;
+    border:2px solid var(--main-color);
+    background-color: transparent;
+    color:var(--main-color);
+    padding:.3rem;
+    border-radius:25px;
+    margin:.5rem;
+    transition:.5s ease;
+    width:5rem;
+}
+#officerMessagingContainer #officerMessaging button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 .5rem var(--main-color);
+}
+
+#officerMessagingContainer #officerMessaging #msgTitle{
+    margin:1rem 0;
+    font-size:13px;
+    background-color: var(--second-bg-color);
+    padding:.2rem;
+    border:none;
+    border-radius:15px;
+    text-align:center;
+    color:var(--main-color);
+    float:left;
+    width:15rem;
+}
+#officerMessaging .msgAreaContainer #msgArea{
+    border-radius:15px;
+    background-color: var(--second-bg-color);
+    padding:1rem;
+    color:var(--main-color);
+    border:none;
+    outline:none;
+    font-size:13px;
+    
+}
+.sendContainer{
+    width:100%;
+    padding:.5rem;
+    text-align: right;
+    
+}
+
+/* ======================================styling notification bar */
+#NotificationContainer{
+    display:none;
+    float:right;
+    height:29rem;
+    z-index:1;
+    background-color: var(--background);
+    border:1px solid var(--gray);
+    box-shadow: 0 0 1rem var(--black);
+}
+#NotificationContainer{
+    float:right;
+    position:absolute;
+    right:5%;
+    border-radius:10px;
+    padding:1rem;
+    top:17%;
+    width:30rem;
+}
+#NotificationContainer::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 12px;
+}
+#NotificationContainer #NotifContain{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    text-align:center;
+}
+#NotificationContainer .SearchContainer{
+    width:100%;
+    display:flex;
+    text-align: right;
+    justify-content: right;
+    margin-bottom:1.5rem;
+    position:sticky;
+}
+#NotificationContainer .SearchContainer button{
+   background-color: transparent;
+   border:none;
+    margin:.4rem;   
+}    
+#NotificationContainer .SearchContainer button i{
+    color:var(--gold);
+}          
+#NotificationContainer #NotifContain .Identity{
+	padding:1rem 2%;
+    margin:.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    width:8rem;
+    align-items: center;
+    flex-direction:column;
+}
+
+#NotificationContainer #NotifContain .Identity h6{
+	font-size:12px;
+}  
+#NotificationContainer .SearchContainer #searchNotif{
+    width:8rem;
+    background-color:transparent;
+    border:2px solid gray;
+    border-radius:25px;
+    margin:.2rem;
+    font-size:12px;
+    color:var(--gold);
+}
+
+#NotificationContainer #NotifContain .buttons .btnDone{
+font-size:12px;
+border-radius:25px;
+background-color: transparent;
+border:2px solid var(--gold);
+padding:.5rem;
+
+}
+ #NotifContain .buttons  a{
+    margin:.5rem;
+color:var(--gold);
+}
